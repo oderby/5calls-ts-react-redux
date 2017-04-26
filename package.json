@@ -4,9 +4,9 @@
   "description": "starter for a react-redux-typescript project. Current as of May 2017",
   "main": "dev.server.js",
   "scripts": {
-    "start": "cross-env NODE_ENV=dev node scripts/start.js",
-    "build": "cross-env NODE_ENV=prod webpack",
-    "test": "jest",
+    "start": "cross-env node scripts/start.js",
+    "build": "cross-env webpack",
+    "test": "cross-env node scripts/test.js",
     "lint": "tslint 'src/**/*.{ts,tsx}'"
   },
   "repository": {
@@ -19,9 +19,6 @@
     "transform": {
       "^.+\\.tsx$": "<rootDir>/node_modules/ts-jest/preprocessor.js"
     },
-    "setupFiles": [
-      "<rootDir>/jest-prevent-css-injection.js"
-    ],
     "moduleFileExtensions": [
       "ts",
       "tsx",
