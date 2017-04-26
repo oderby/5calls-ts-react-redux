@@ -27,7 +27,7 @@
       "tsx",
       "js"
     ],
-    "testRegex": "/__tests__/.*\\.(ts|tsx|js)$"
+    "testRegex": "/src/.*\\.test.tsx$"
   },
   "devDependencies": {
     "@types/aphrodite": "^0.5.5",
@@ -43,6 +43,7 @@
     "@types/redux-thunk": "^2.1.0",
     "cross-env": "^3.1.4",
     "css-loader": "^0.26.2",
+    "enzyme": "^2.8.2",
     "eslint": "^3.16.1",
     "eslint-config-airbnb-base": "^11.1.0",
     "eslint-plugin-import": "^2.2.0",
@@ -63,6 +64,7 @@
   "dependencies": {
     "aphrodite": "^1.1.0",
     "history": "^4.6.1",
+    "immutable": "^3.8.1",
     "react": "^15.4.2",
     "react-dom": "^15.4.2",
     "react-redux": "^5.0.3",

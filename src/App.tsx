@@ -33,5 +33,5 @@ ReactDOM.render(
       <Route path="/" component={Main}/>
     </ConnectedRouter>
   </Provider>,
-  document.getElementById('content')
+  document.getElementById('root')
 );
