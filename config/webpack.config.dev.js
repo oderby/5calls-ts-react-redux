@@ -5,9 +5,11 @@ var webpack = require('webpack');
 var path = require('path');
 var HtmlWebpackPlugin = require('html-webpack-plugin');
 
-var entries = [
-  path.join(__dirname, '../src/App'),
-];
+var entry = {
+  app: [
+    path.join(__dirname, '../src/App'),
+  ]
+} 
 
 var output = {
   filename: 'bundle.js',
@@ -29,7 +31,7 @@ var plugins = [
 ];
 
 module.exports = {
-  entry: entries,
+  entry: entry,
   output: output,
   devtool: '',
   resolve: {

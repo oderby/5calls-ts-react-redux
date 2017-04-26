@@ -54,10 +54,9 @@ function setupCompiler(host, port, protocol) {
 
 function runDevServer(host, port, protocol) {
   var devServer = new WebpackDevServer(compiler, {
+    historyApiFallback: true,
     clientLogLevel: 'none',
-    contentBase: config.output.publicPath,
     hot: true,
-    publicPath: config.output.publicPath,
     quiet: true,
     watchOptions: {
       ignored: /node_modules/
@@ -70,7 +69,7 @@ function runDevServer(host, port, protocol) {
       return console.log(err);
     }
 
-    clearConsole();
+    //clearConsole();
     console.log(chalk.cyan('Starting the development server...'));
     console.log();
     openBrowser(protocol + '://' + host + ':' + port + '/');
