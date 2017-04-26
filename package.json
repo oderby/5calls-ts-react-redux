@@ -1,5 +1,5 @@
 {
-  "name": "react-typescript-starter",
+  "name": "ts-react-redux",
   "version": "0.1.1",
   "description": "",
   "main": "dev.server.js",
@@ -11,9 +11,9 @@
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/alex3165/react-typescript-starter.git"
+    "url": "git://github.com/schraj/ts-react-redux.git"
   },
-  "author": "Alexandre Rieux",
+  "author": "",
   "license": "ISC",
   "jest": {
     "transform": {
@@ -31,13 +31,14 @@
   },
   "devDependencies": {
     "@types/aphrodite": "^0.5.5",
+    "@types/history": "^4.5.0",
     "@types/jest": "^19.2.2",
     "@types/react": "^15.0.12",
     "@types/react-addons-test-utils": "^0.14.17",
     "@types/react-dom": "^0.14.23",
     "@types/react-redux": "^4.4.39",
     "@types/react-router": "^4.0.4",
-    "@types/react-router-redux": "^4.0.46",
+    "@types/react-router-redux": "^5.0.0",
     "@types/redux-logger": "^3.0.0",
     "@types/redux-thunk": "^2.1.0",
     "cross-env": "^3.1.4",
