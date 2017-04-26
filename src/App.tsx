@@ -7,9 +7,9 @@ import { applyMiddleware, createStore } from 'redux';
 import { Provider } from 'react-redux';
 import thunk from 'redux-thunk';
 import { createLogger, ReduxLoggerOptions } from 'redux-logger';
-import createHistory from 'history/createBrowserHistory'
+import createHistory from 'history/createBrowserHistory';
 
-const history = createHistory()
+const history = createHistory();
 
 import Main from './containers/main';
 

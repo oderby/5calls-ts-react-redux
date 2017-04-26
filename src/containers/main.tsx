@@ -1,15 +1,14 @@
 import * as React from 'react';
 import glamorous from 'glamorous';
 
-export class Main extends React.Component<void, void> {  
+export class Main extends React.Component<void, void> {
 
   public render() {
-
-    let Title = glamorous.h1({
+    const Title = glamorous.h1({
       fontSize: '1.5em',
       textAlign: 'center',
-      color: 'palevioletred',
-    })
+      color: 'palevioletred'
+    });
 
     return (
       <div>
