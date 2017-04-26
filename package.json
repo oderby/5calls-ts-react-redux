@@ -1,0 +1,73 @@
+{
+  "name": "react-typescript-starter",
+  "version": "0.1.1",
+  "description": "",
+  "main": "dev.server.js",
+  "scripts": {
+    "start": "cross-env NODE_ENV=dev node dev.server.js",
+    "build": "cross-env NODE_ENV=prod webpack",
+    "test": "jest",
+    "lint": "tslint 'src/**/*.{ts,tsx}'"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/alex3165/react-typescript-starter.git"
+  },
+  "author": "Alexandre Rieux",
+  "license": "ISC",
+  "jest": {
+    "transform": {
+      "^.+\\.tsx$": "<rootDir>/node_modules/ts-jest/preprocessor.js"
+    },
+    "setupFiles": [
+      "<rootDir>/jest-prevent-css-injection.js"
+    ],
+    "moduleFileExtensions": [
+      "ts",
+      "tsx",
+      "js"
+    ],
+    "testRegex": "/__tests__/.*\\.(ts|tsx|js)$"
+  },
+  "devDependencies": {
+    "@types/aphrodite": "^0.5.5",
+    "@types/jest": "^19.2.2",
+    "@types/react": "^15.0.12",
+    "@types/react-addons-test-utils": "^0.14.17",
+    "@types/react-dom": "^0.14.23",
+    "@types/react-redux": "^4.4.39",
+    "@types/react-router": "^4.0.4",
+    "@types/react-router-redux": "^4.0.46",
+    "@types/redux-logger": "^3.0.0",
+    "@types/redux-thunk": "^2.1.0",
+    "cross-env": "^3.1.4",
+    "css-loader": "^0.26.2",
+    "eslint": "^3.16.1",
+    "eslint-config-airbnb-base": "^11.1.0",
+    "eslint-plugin-import": "^2.2.0",
+    "jest": "^19.0.2",
+    "jest-cli": "^19.0.2",
+    "react-addons-test-utils": "^15.4.2",
+    "react-transform-hmr": "^1.0.4",
+    "style-loader": "^0.13.2",
+    "ts-jest": "^19.0.11",
+    "ts-loader": "^2.0.1",
+    "tslint": "^4.4.2",
+    "tslint-loader": "^3.4.2",
+    "tslint-react": "^2.4.0",
+    "typescript": "^2.2.1",
+    "webpack": "^2.2.1",
+    "webpack-dev-server": "^2.4.1"
+  },
+  "dependencies": {
+    "aphrodite": "^1.1.0",
+    "history": "^4.6.1",
+    "react": "^15.4.2",
+    "react-dom": "^15.4.2",
+    "react-redux": "^5.0.3",
+    "react-router": "^4.1.1",
+    "redux": "^3.6.0",
+    "redux-logger": "^3.0.1",
+    "redux-thunk": "^2.2.0"
+  }
+}
