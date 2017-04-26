@@ -1,22 +1,24 @@
+process.env.NODE_ENV = 'development';
+process.env.PUBLIC_URL = '';
+
 var webpack = require('webpack');
 var path = require('path');
 var HtmlWebpackPlugin = require('html-webpack-plugin');
 
 var entries = [
   path.join(__dirname, '../src/App'),
-  //'webpack-dev-server/client?http://localhost:3001',
 ];
 
 var output = {
   filename: 'bundle.js',
-  path: path.join(__dirname, './build')
+  path: path.join(__dirname, 'build')
 };
 
 var plugins = [
   new webpack.PrefetchPlugin('react'),
   new webpack.DefinePlugin({
     'process.env': {
-      NODE_ENV: "'dev'"
+      NODE_ENV: JSON.stringify("Development")
     }
   }),
   new webpack.HotModuleReplacementPlugin(),

@@ -5,7 +5,7 @@
   "main": "dev.server.js",
   "scripts": {
     "start": "cross-env node scripts/start.js",
-    "build": "cross-env webpack",
+    "build": "cross-env node scripts/build.js",
     "test": "cross-env node scripts/test.js",
     "lint": "tslint 'src/**/*.{ts,tsx}'"
   },
@@ -51,6 +51,7 @@
     "react-addons-test-utils": "^15.4.2",
     "react-dev-utils": "^0.5.2",
     "react-transform-hmr": "^1.0.4",
+    "rimraf": "^2.6.1",
     "style-loader": "^0.13.2",
     "ts-jest": "^19.0.11",
     "ts-loader": "^2.0.1",

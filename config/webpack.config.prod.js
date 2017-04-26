@@ -1,9 +1,11 @@
 var webpack = require('webpack');
 var path = require('path');
+var HtmlWebpackPlugin = require('html-webpack-plugin');
 
-var env = process.env.NODE_ENV;
+var entries = [
+  path.join(__dirname, '../src/App'),
+];
 
-var entries = [path.join(__dirname, 'src/App')];
 var output = {
   filename: 'bundle.js',
   path: path.join(__dirname, 'build')
@@ -13,27 +15,19 @@ var plugins = [
   new webpack.PrefetchPlugin('react'),
   new webpack.DefinePlugin({
     'process.env': {
-      NODE_ENV: "'" + env + "'"
+      NODE_ENV: JSON.stringify("Production")
     }
-  })
+  }),
+  new HtmlWebpackPlugin({
+      inject: true,
+      template: './public/index.html',
+  }),
 ];
-
-var devtool = '';
-
-if (env === 'dev') {
-  entries = entries.concat(['webpack-dev-server/client?http://localhost:3001']);
-  output.path = __dirname;
-  devtool = '';
-  plugins.push(new webpack.HotModuleReplacementPlugin());
-} else {
-  plugins = plugins.concat([
-  ]);
-}
 
 module.exports = {
   entry: entries,
   output: output,
-  devtool: devtool,
+  devtool: '',
   resolve: {
     extensions: ['.ts', '.js', '.tsx', '.css']
   },

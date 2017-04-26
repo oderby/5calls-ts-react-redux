@@ -7,19 +7,16 @@ var rimrafSync = require('rimraf').sync;
 var webpack = require('webpack');
 var config = require('../config/webpack.config.prod');
 
-function deployToBuild() {
-  // Remove all content but keep the directory so that
-  // if you're in it, you don't end up in Trash
-  rimrafSync('build/*');
+var publicPath = path.join(__dirname, 'public');
 
-  // Start the webpack build
+function deployToBuildFolder() {
+  rimrafSync(config.output.path + '/*');
+
   build();
 
-  // Merge with the public folder
   copyPublicFolder();
 };
 
-// Print out errors
 function printErrors(summary, errors) {
   console.log(chalk.red(summary));
   console.log();
@@ -29,7 +26,6 @@ function printErrors(summary, errors) {
   });
 }
 
-// Create the production build and print the deployment instructions.
 function build() {
   console.log('Creating an optimized production build...');
   webpack(config).run((err, stats) => {
@@ -49,8 +45,10 @@ function build() {
 }
 
 function copyPublicFolder() {
-  fs.copySync(paths.appPublic, paths.appBuild, {
+  fs.copySync(config.output.path, publicPath, {
     dereference: true,
-    filter: file => file !== paths.appHtml
+    filter: file => file !== 'index.html'
   });
 }
+
+deployToBuildFolder();
