@@ -14,7 +14,6 @@ const history = createHistory()
 import Main from './containers/main';
 
 import rootReducer from './reducers';
-import './common.css';
 
 declare var process: any;
 const env = process.env.NODE_ENV;

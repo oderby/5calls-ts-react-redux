@@ -1,6 +1,11 @@
 var WebpackDevServer = require('webpack-dev-server');
 var webpack = require('webpack');
-var config = require('./webpack.config.js');
+
+var env = process.env.NODE_ENV;
+
+var config = env === 'dev' 
+  ? require('./config/webpack.config.dev.js') 
+  : require('./config/webpack.config.prod.js');
 
 var host = '127.0.0.1';
 var port = 3001;

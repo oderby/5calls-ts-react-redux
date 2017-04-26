@@ -5,7 +5,7 @@ import { Main } from './containers/main';
 
 it('Should check if the index page render correctly', () => {
 
-  const wrapper = TestUtils.renderIntoDocument(
+  const wrapper: any = TestUtils.renderIntoDocument(
     <Main/>
   );
 

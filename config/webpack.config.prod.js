@@ -1,19 +1,13 @@
 var webpack = require('webpack');
 var path = require('path');
-var CopyWebpackPlugin = require('copy-webpack-plugin');
 
 var env = process.env.NODE_ENV;
 
 var entries = [path.join(__dirname, 'src/App')];
 var output = {
   filename: 'bundle.js',
-  path: path.join(__dirname, 'dist')
+  path: path.join(__dirname, 'build')
 };
-
-// Add more files to copy to the dist folder (Eventually an assets folder)
-var toCopy = [
-  { from: 'index.html' }
-];
 
 var plugins = [
   new webpack.PrefetchPlugin('react'),
@@ -33,7 +27,6 @@ if (env === 'dev') {
   plugins.push(new webpack.HotModuleReplacementPlugin());
 } else {
   plugins = plugins.concat([
-    new CopyWebpackPlugin(toCopy)
   ]);
 }
 
@@ -52,7 +45,11 @@ module.exports = {
       },
       {
         test: /\.css$/,
-        loader: 'style-loader!css-loader'
+        loader: 'style-loader'
+      },
+      {
+        test: /\.css$/,
+        loader: 'css-loader'
       }
     ]
   },
