@@ -1,5 +1,5 @@
-# react-typescript-starter
-Complete setup to start a new React project using Typescript.
+# ts-react-redux
+In-Progress setup to start a new React/Redux project using Typescript.
 
 
 ## It includes
