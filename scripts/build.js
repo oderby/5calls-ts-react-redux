@@ -7,7 +7,7 @@ var rimrafSync = require('rimraf').sync;
 var webpack = require('webpack');
 var config = require('../config/webpack.config.prod');
 
-var publicPath = path.join(__dirname, 'public');
+var publicPath = path.join(__dirname, '../public');
 
 function deployToBuildFolder() {
   rimrafSync(config.output.path + '/*');

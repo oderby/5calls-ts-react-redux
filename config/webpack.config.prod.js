@@ -8,11 +8,10 @@ var entries = [
 
 var output = {
   filename: 'bundle.js',
-  path: path.join(__dirname, 'build')
+  path: path.join(__dirname, '../build')
 };
 
 var plugins = [
-  new webpack.PrefetchPlugin('react'),
   new webpack.DefinePlugin({
     'process.env': {
       NODE_ENV: JSON.stringify("Production")
@@ -27,7 +26,7 @@ var plugins = [
 module.exports = {
   entry: entries,
   output: output,
-  devtool: '',
+  devtool: 'eval',
   resolve: {
     extensions: ['.ts', '.js', '.tsx', '.css']
   },
