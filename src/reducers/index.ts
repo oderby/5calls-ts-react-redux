@@ -1,9 +1,15 @@
+import { Action } from 'redux';
 import { routerReducer as routing } from 'react-router-redux';
-import { combineReducers, Action } from 'redux';
+import { combineReducers } from 'redux';
+import BooksReducer from './reducer_books';
+import ActiveBook from './reducer_active_book';
+
+
 
 const reducers = combineReducers<any>({
   routing,
-  entities: (state: any = {}, action: Action) => state
+  books: BooksReducer,
+  activeBook: ActiveBook
 });
 
 export default reducers;

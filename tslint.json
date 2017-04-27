@@ -4,9 +4,12 @@
     "quotemark": [true, "single", "jsx-double"],
     "ordered-imports": false,
     "trailing-comma": [true, {"multiline": "never", "singleline": "never"}],
-    "interface-name": [true, "never-prefix"],
+    "interface-name": [false, "never-prefix"],
     "no-console": false,
     "object-literal-sort-keys": false,
-    "member-ordering": false
+    "member-ordering": false,
+    "member-access": [
+      false
+    ]
   }
 }
