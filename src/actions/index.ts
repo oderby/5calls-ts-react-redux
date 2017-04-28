@@ -6,14 +6,20 @@ import { Action } from 'redux';
  * Action Creators return an Action
  *
  */
-export interface IIssueSelectedAction extends Action {
-  type: string;
+
+export enum ActionType {
+  ISSUE_SELECTED,
+  FIND_ISSUES
+}
+
+export interface IIssueSelectedAction {
+  type: ActionType;
   payload: IIssue;
 }
 
 export function selectIssue(issue): IIssueSelectedAction {
   return {
-    type: 'ISSUE_SELECTED',
+    type: ActionType.ISSUE_SELECTED,
     payload: issue
   };
 }
@@ -28,13 +34,13 @@ export const issues: IIssue[] = [
 
 
 export interface IIssueListAction extends Action {
-  type: string;
+  type: ActionType;
   payload: IIssue[];
 }
 
 export function findIssues(): IIssueListAction {
   return {
-    type: 'FIND_ISSUES',
+    type: ActionType.FIND_ISSUES,
     payload: issues
   };
 }
