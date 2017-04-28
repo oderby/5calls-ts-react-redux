@@ -13,12 +13,14 @@ import BookDetail from './book-detail';
     });
 
     return (
-      <div>
+      <div className="container">
         <div>
-          <Title>Yeah it works</Title>
+          <Title>5 Calls Prototype</Title>
         </div>
-        <div><BookList /></div>
-        <div><BookDetail /></div>
+        <div>
+          <div><BookList /></div>
+          <div><BookDetail /></div>
+        </div>
       </div>
     );
   }
