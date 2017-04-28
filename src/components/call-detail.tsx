@@ -1,12 +1,11 @@
 import * as React from 'react';
-import { connect } from 'react-redux';
 import {IIssue} from '../model';
 
-interface IStateProps {
+interface IProps {
   issue: IIssue;
 }
 
-class CallDetail extends React.Component<IStateProps, void> {
+export default class CallDetail extends React.Component<IProps, void> {
 
   render() {
     if (!this.props.issue || !this.props.issue.title) {
@@ -22,11 +21,3 @@ class CallDetail extends React.Component<IStateProps, void> {
     );
   }
 }
-
-function mapStateToProps(state) {
-  return {
-    issue: state.activeIssue
-  };
-}
-
-export default connect<IStateProps, void, void>(mapStateToProps)(CallDetail);

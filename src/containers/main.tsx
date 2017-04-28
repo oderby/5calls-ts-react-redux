@@ -1,7 +1,7 @@
 import * as React from 'react';
 import glamorous from 'glamorous';
-import IssueList from './issue-list';
-import CallDetail from './call-detail';
+import IssueListContainer from './issue-list-container';
+import CallDetailContainer from './call-detail-container';
 
  export class Main extends React.Component<void, void> {
 
@@ -9,7 +9,7 @@ import CallDetail from './call-detail';
     const Title = glamorous.h1({
       fontSize: '1.5em',
       textAlign: 'center',
-      color: 'palevioletred'
+      color: 'blue'
     });
 
     return (
@@ -18,8 +18,8 @@ import CallDetail from './call-detail';
           <Title>5 Calls Prototype</Title>
         </div>
         <div>
-          <div><IssueList /></div>
-          <div><CallDetail /></div>
+          <div><IssueListContainer /></div>
+          <div><CallDetailContainer /></div>
         </div>
       </div>
     );
