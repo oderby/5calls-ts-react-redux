@@ -1,23 +1,22 @@
 import * as React from 'react';
-import {connect} from 'react-redux';
+import {connect, Dispatch} from 'react-redux';
 import {selectBook} from '../actions/index';
 import {bindActionCreators} from 'redux';
 import {IBook} from '../model';
-
-// interface IBookListProps {
-//   books: IBook[];
-//   activeBook: IBook;
-// }
 
 interface IStateProps {
   books: IBook[];
 }
 
 interface IDispatchProps {
-  selectBook: IBook;
+  selectBook: (book: IBook) => void;
 }
 
 class BookList extends React.Component<IStateProps & IDispatchProps, void> {
+  constructor(props) {
+    super(props);
+  }
+
   renderList() {
     return this.props.books.map((book) => {
       return (
@@ -42,7 +41,7 @@ class BookList extends React.Component<IStateProps & IDispatchProps, void> {
  * @param {any} props
  * @returns
  */
-function mapStateToProps(state) {
+function mapStateToProps(state): IStateProps {
   // what is returned here will show up
   // as props inside of bookList
   return {
@@ -57,7 +56,7 @@ function mapStateToProps(state) {
  * @param {any} dispatch
  * @returns
  */
-function mapDispatchToProps(dispatch) {
+function mapDispatchToProps(dispatch: Dispatch<IDispatchProps>): IDispatchProps {
   // Whenever selectBook is called, the result
   // will be passed to all of our reducers
   return bindActionCreators({selectBook}, dispatch);
