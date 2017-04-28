@@ -1,7 +1,7 @@
 import * as React from 'react';
 import glamorous from 'glamorous';
-import BookList from './book-list';
-import BookDetail from './book-detail';
+import IssueList from './issue-list';
+import CallDetail from './call-detail';
 
  export class Main extends React.Component<void, void> {
 
@@ -18,8 +18,8 @@ import BookDetail from './book-detail';
           <Title>5 Calls Prototype</Title>
         </div>
         <div>
-          <div><BookList /></div>
-          <div><BookDetail /></div>
+          <div><IssueList /></div>
+          <div><CallDetail /></div>
         </div>
       </div>
     );

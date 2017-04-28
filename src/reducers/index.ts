@@ -1,14 +1,14 @@
 import { routerReducer as routing } from 'react-router-redux';
 import { combineReducers } from 'redux';
-import BooksReducer from './reducer_books';
-import ActiveBook from './reducer_active_book';
+import IssueListReducer from './reducer_issues';
+import ActiveIssue from './reducer_active_issue';
 
 
 
 const reducers = combineReducers<any>({
   routing,
-  books: BooksReducer,
-  activeBook: ActiveBook
+  issues: IssueListReducer,
+  activeIssue: ActiveIssue
 });
 
 export default reducers;

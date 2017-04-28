@@ -1,44 +1,40 @@
-import { IBookListAction } from './index';
-import { IBook } from './../model';
+import { IIssueListAction } from './index';
+import { IIssue } from './../model';
 import { Action } from 'redux';
 /*
  * This file holds Action Creators
  * Action Creators return an Action
  *
  */
-export interface IBookSelectedAction extends Action {
+export interface IIssueSelectedAction extends Action {
   type: string;
-  payload: IBook;
+  payload: IIssue;
 }
 
-export function selectBook(book): IBookSelectedAction {
-  // returns an action that is an object
-  // that must contain a type (string,
-  // usually uppercased)
-  // and a payload
+export function selectIssue(issue): IIssueSelectedAction {
   return {
-    type: 'BOOK_SELECTED',
-    payload: book
+    type: 'ISSUE_SELECTED',
+    payload: issue
   };
 }
 
-export const books: IBook[] = [
-      {title: 'JavaScript: The Good Parts', pages: 99},
-      {title: 'Harry Potter', pages: 1001},
-      {title: 'The Dark Tower', pages: 1234},
-      {title: 'Eloquent Java', pages: 1}
+export const issues: IIssue[] = [
+      {title: 'Issue 1', details: 'issue 1 details'},
+      {title: 'Issue 2', details: 'issue 2 details'},
+      {title: 'Issue 3', details: 'issue 3 details'},
+      {title: 'Issue 4', details: 'issue 4 details'},
     ];
 
 
 
-export interface IBookListAction extends Action {
+export interface IIssueListAction extends Action {
   type: string;
-  payload: IBook[];
+  payload: IIssue[];
 }
 
-export function findBooks(): IBookListAction {
+export function findIssues(): IIssueListAction {
   return {
-    type: 'FIND_BOOKS',
-    payload: books
+    type: 'FIND_ISSUES',
+    payload: issues
   };
 }

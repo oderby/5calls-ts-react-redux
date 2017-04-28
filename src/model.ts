@@ -1,6 +1,6 @@
 
 
-export interface IBook {
+export interface IIssue {
   title: string;
-  pages?: number;
+  details?: string;
 }
