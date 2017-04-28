@@ -10,6 +10,7 @@
     "member-ordering": false,
     "member-access": [
       false
-    ]
+    ],
+    "jsx-no-lambda": false
   }
 }
