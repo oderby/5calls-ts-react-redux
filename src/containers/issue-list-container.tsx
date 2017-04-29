@@ -22,4 +22,4 @@ function mapDispatchToProps(dispatch: Dispatch<IDispatchProps>): IDispatchProps 
   return bindActionCreators({selectIssue}, dispatch);
 }
 
-export default connect<IStateProps, IDispatchProps, void>(mapStateToProps, mapDispatchToProps)(IssueList);
+export default connect<IStateProps, IDispatchProps, {}>(mapStateToProps, mapDispatchToProps)(IssueList);

@@ -6,7 +6,9 @@ interface IProps {
   selectIssue: (issue: IIssue) => void;
 }
 
-export default class IssueList extends React.Component<IProps, void> {
+interface IState {}
+
+export default class IssueList extends React.Component<IProps, IState> {
   constructor(props) {
     super(props);
   }

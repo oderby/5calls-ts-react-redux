@@ -11,6 +11,7 @@
     "member-access": [
       false
     ],
-    "jsx-no-lambda": false
+    "jsx-no-lambda": false,
+    "no-empty-interface": false
   }
 }

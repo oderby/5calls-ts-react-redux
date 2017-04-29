@@ -6,10 +6,10 @@ interface IStateProps {
   issue: IIssue;
 }
 
-function mapStateToProps(state) {
+function mapStateToProps(state): IStateProps {
   return {
     issue: state.activeIssue
   };
 }
 
-export default connect<IStateProps, void, void>(mapStateToProps)(CallDetail);
+export default connect<IStateProps, {}, {}>(mapStateToProps)(CallDetail);

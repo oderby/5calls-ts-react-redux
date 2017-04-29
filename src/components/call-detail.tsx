@@ -4,8 +4,9 @@ import {IIssue} from '../model';
 interface IProps {
   issue: IIssue;
 }
+interface IState {}
 
-export default class CallDetail extends React.Component<IProps, void> {
+class CallDetail extends React.Component<IProps, IState> {
 
   render() {
     if (!this.props.issue || !this.props.issue.title) {
@@ -21,3 +22,5 @@ export default class CallDetail extends React.Component<IProps, void> {
     );
   }
 }
+
+export default CallDetail;

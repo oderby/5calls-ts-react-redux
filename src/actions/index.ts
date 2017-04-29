@@ -12,7 +12,7 @@ export enum ActionType {
   FIND_ISSUES
 }
 
-export interface IIssueSelectedAction {
+export interface IIssueSelectedAction extends Action {
   type: ActionType;
   payload: IIssue;
 }

@@ -1,7 +1,7 @@
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
 import * as TestUtils from 'react-dom/test-utils';
-import { Main } from './containers/main';
+import Main from './containers/main';
 
 it('Should check if the index page render correctly', () => {
 
