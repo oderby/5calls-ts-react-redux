@@ -1,4 +1,3 @@
-import { IIssueListAction } from './index';
 import { IIssue } from './../model';
 import { Action } from 'redux';
 /*
