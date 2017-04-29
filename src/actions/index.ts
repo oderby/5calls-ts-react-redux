@@ -1,4 +1,4 @@
-import { IIssue } from './../model';
+import { IIssue } from '../model';
 import { Action } from 'redux';
 /*
  * This file holds Action Creators
