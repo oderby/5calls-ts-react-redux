@@ -8,6 +8,7 @@ import { Provider } from 'react-redux';
 import thunk from 'redux-thunk';
 import { createLogger, ReduxLoggerOptions } from 'redux-logger';
 import createHistory from 'history/createBrowserHistory';
+import About from './components/about';
 
 const history = createHistory();
 
@@ -29,7 +30,10 @@ const store = createStore(rootReducer, {}, applyMiddleware(...middlewares));
 ReactDOM.render(
   <Provider store={store}>
     <ConnectedRouter history={history}>
-      <Route path="/" component={Main}/>
+      <div>
+        <Route path="/" exact={true} component={Main}/>
+        <Route path="/about" exact={true} component={About}/>
+      </div>
     </ConnectedRouter>
   </Provider>,
   document.getElementById('root')
