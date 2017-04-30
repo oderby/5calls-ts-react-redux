@@ -1,7 +1,8 @@
+import { Reducer } from 'redux';
 import { IIssueListAction, issues, ActionType } from './../actions/index';
 import { IIssue } from './../model';
 
-const IssueListReducer = (state: IIssue[] = issues, action: IIssueListAction) => {
+const issueListReducer: Reducer<IIssue[]> = (state: IIssue[] = issues, action: IIssueListAction) => {
   switch (action.type) {
     case ActionType.FIND_ISSUES:
       return state;
@@ -10,4 +11,4 @@ const IssueListReducer = (state: IIssue[] = issues, action: IIssueListAction) =>
   }
 };
 
-export default IssueListReducer;
+export default issueListReducer;

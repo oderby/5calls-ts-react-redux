@@ -1,8 +1,9 @@
+import { Reducer } from 'redux';
 import { IIssue } from './../model';
 import { IIssueSelectedAction, ActionType } from './../actions/index';
 /**
  */
-const ActiveIssue = (state: IIssue = {title: ''}, action: IIssueSelectedAction) => {
+const activeIssueReducer: Reducer<IIssue> = (state: IIssue = {title: ''}, action: IIssueSelectedAction) => {
   switch (action.type) {
     case ActionType.ISSUE_SELECTED:
       return action.payload;
@@ -11,5 +12,5 @@ const ActiveIssue = (state: IIssue = {title: ''}, action: IIssueSelectedAction) 
   }
 };
 
-export default ActiveIssue;
+export default activeIssueReducer;
 

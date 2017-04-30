@@ -1,7 +1,7 @@
 import { routerReducer as routing } from 'react-router-redux';
 import { combineReducers } from 'redux';
-import IssueListReducer from './reducer_issues';
-import ActiveIssue from './reducer_active_issue';
+import issueListReducer from './reducer_issues';
+import activeIssueReducer from './reducer_active_issue';
 import { IIssue } from '../model';
 
 export interface IApplicationState {
@@ -12,8 +12,8 @@ export interface IApplicationState {
 
 const reducers = combineReducers<IApplicationState>({
   routing,
-  issues: IssueListReducer,
-  activeIssue: ActiveIssue
+  issues: issueListReducer,
+  activeIssue: activeIssueReducer
 });
 
 export default reducers;
