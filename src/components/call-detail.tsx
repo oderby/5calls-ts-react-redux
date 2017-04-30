@@ -2,7 +2,7 @@ import * as React from 'react';
 import {IIssue} from '../model';
 
 interface IProps {
-  issue: IIssue;
+  readonly issue: IIssue;
 }
 interface IState {}
 

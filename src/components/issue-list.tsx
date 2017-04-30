@@ -2,7 +2,7 @@ import * as React from 'react';
 import {IIssue} from '../model';
 
 interface IProps {
-  issues: IIssue[];
+  readonly issues: IIssue[];
   selectIssue: (issue: IIssue) => void;
 }
 
