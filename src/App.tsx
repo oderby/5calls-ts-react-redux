@@ -4,7 +4,8 @@ import * as ReactDOM from 'react-dom';
 import { Route } from 'react-router';
 import { ConnectedRouter } from 'react-router-redux';
 import { applyMiddleware, createStore } from 'redux';
-import { Provider } from 'react-redux';
+import { Provider, Store } from 'react-redux';
+import { IApplicationState } from './reducers';
 import thunk from 'redux-thunk';
 import { createLogger, ReduxLoggerOptions } from 'redux-logger';
 import createHistory from 'history/createBrowserHistory';
@@ -25,7 +26,8 @@ if (env === 'dev') {
   middlewares.push(createLogger(options));
 }
 
-const store = createStore(rootReducer, {}, applyMiddleware(...middlewares));
+const store: Store<IApplicationState> =
+  createStore(rootReducer, {}, applyMiddleware(...middlewares));
 
 ReactDOM.render(
   <Provider store={store}>
