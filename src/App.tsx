@@ -8,11 +8,11 @@ import { Provider } from 'react-redux';
 import thunk from 'redux-thunk';
 import { createLogger, ReduxLoggerOptions } from 'redux-logger';
 import createHistory from 'history/createBrowserHistory';
-import About from './components/about';
 
 const history = createHistory();
 
-import Main from './containers/main';
+import HomePage from './pages/home-page';
+import AboutPage from './pages/about-page';
 
 import rootReducer from './reducers';
 
@@ -31,8 +31,8 @@ ReactDOM.render(
   <Provider store={store}>
     <ConnectedRouter history={history}>
       <div>
-        <Route path="/" exact={true} component={Main}/>
-        <Route path="/about" exact={true} component={About}/>
+        <Route path="/" exact={true} component={HomePage}/>
+        <Route path="/about" exact={true} component={AboutPage}/>
       </div>
     </ConnectedRouter>
   </Provider>,
