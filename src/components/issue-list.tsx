@@ -1,5 +1,10 @@
 import * as React from 'react';
 import {IIssue} from '../model';
+import glamorous from 'glamorous';
+
+const HandCursorStyle = glamorous.span({
+  cursor: 'pointer'
+});
 
 interface IProps {
   readonly issues: IIssue[];
@@ -21,9 +26,9 @@ export default class IssueList extends React.Component<IProps, IState> {
     }
     return this.props.issues.map((issue) => {
       return (
-        <li key={issue.title}
+        <HandCursorStyle><li key={issue.id}
         onClick={() => this.props.selectIssue(issue)}
-        className="list-group-item">{issue.title}</li>
+        className="list-group-item hand-cursor">{issue.name}</li></HandCursorStyle>
       );
     });
   }

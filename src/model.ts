@@ -1,6 +1,14 @@
 
-
 export interface IIssue {
-  title: string;
-  details?: string;
+  id: number;
+  name: string;
+  script?: string;
+  contacts?: IContact[];
+}
+
+export interface IContact {
+  Name: string;
+  Phone?: string;
+  PhotoURL?: string;
+  Area?: string;
 }
