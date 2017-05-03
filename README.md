@@ -1,36 +1,16 @@
-# ts-react-redux
-In-Progress setup to start a new React/Redux project using Typescript.
+# 5calls-ts-react-redux
+Proof-of-concept showing how the 5 Calls website could be developed
+using the React UI framework, the Redux state management library
+and TypeScript for type-safe JavaScript development.
 
+## Building and running the code
 
-## It includes
-- Typescript
-- Webpack
-- Eslint / TSLint with airbnb setup
-- React
-- Redux
-- React-router
-- React-router-redux
-- Aphrodite
-- Jest / ts-jest for unit testing
-
-## How to use it
-
-Installation (will install typings as well):
+Installation (will also install the type definitions for React and Redux):
 ```
 npm install
 ```
 
-- Runing development server :
+- Running the development server :
 ```
 npm start
-```
-
-- Build for production :
-```
-npm build
-```
-
-- Run unit tests:
-```
-npm test
 ```
