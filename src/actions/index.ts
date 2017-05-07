@@ -9,7 +9,9 @@ import { getIssues } from '../data';
 
 export enum ActionType {
   ISSUE_SELECTED,
-  FIND_ISSUES
+  FIND_ISSUES,
+  LOCATION_CLEAR,
+  LOCATION_SET
 }
 
 export interface IIssueSelectedAction extends Action {
@@ -33,5 +35,27 @@ export function findIssues(): IIssueListAction {
   return {
     type: ActionType.FIND_ISSUES,
     payload: getIssues()
+  };
+}
+
+export interface ILocationSetAction extends Action {
+  type: ActionType;
+  payload: string;
+}
+
+export function setAddress(address): ILocationSetAction {
+  return {
+    type: ActionType.LOCATION_SET,
+    payload: address
+  };
+}
+
+export interface ILocationClearedAction extends Action {
+  type: ActionType;
+}
+
+export function clearAddress(): ILocationClearedAction {
+  return {
+    type: ActionType.LOCATION_CLEAR
   };
 }
